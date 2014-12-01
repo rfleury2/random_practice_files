@@ -1,0 +1,49 @@
+header {
+  background-color: blue;
+  border: 1px solid red;
+  height: 100px;
+}
+
+#nav {
+  background-color: red;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.nav_button {
+  text-decoration: none;
+  border: 1px solid blue;
+  padding: 20px;
+  position: relative;
+  display: inline-table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav_button:hover {
+  background-color: orange;
+}
+
+#left_side {
+  background-color: green;
+/*  border: 1px solid red;*/
+  height: 100px;
+  width: 50%;
+  float: left;
+}
+
+#right_side {
+  background-color: yellow;
+/*  border: 1px solid red;*/
+  height: 100px;
+  width: 50%;
+  float: right;
+}
+
+footer {
+  background-color: orange;
+  border: 1px solid red;
+  height: 100px;
+  clear: both;
+}
