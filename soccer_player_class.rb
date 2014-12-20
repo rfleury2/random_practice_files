@@ -28,23 +28,28 @@ class SoccerPlayer
   def shoot
     @shot_count += 1
     @goal_count += 1 if @last_name == "Pirlo" ## Pirlo never misses
-    @goal_count += 1 if rand(0..1) == 1 && @last_name != "Pirlo"
+    @goal_count += 1 if rand(0..rand(1..3)) == 1 && @last_name != "Pirlo"
   end
 
 
   def player_summary
     p "#{@first_name} #{@last_name}'s position is #{@position_side} #{@position}"
     p "#{@first_name} #{@last_name} has #{@shot_count} shots and #{@goal_count} goals"
+    puts
   end
 end
 
 pirlo = SoccerPlayer.new("Andrea", "Pirlo", "midfield")
 ronaldo = SoccerPlayer.new("Cristiano", "Ronaldo", "forward", "left")
+robben = SoccerPlayer.new("Arjen", "Robben", "forward", "right")
 
-5.times do pirlo.shoot end
+5.times do
+  pirlo.shoot
+  ronaldo.shoot
+  robben.shoot
+end
 pirlo.player_summary
-
-5.times do ronaldo.shoot end
 ronaldo.player_summary
+robben.player_summary
 
 
